@@ -175,7 +175,7 @@ nav a {
 /* Add more styling as needed */
 
 /* Responsive styles for smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 990px) {
     #inputUrl {
         width: 100%;
     }
