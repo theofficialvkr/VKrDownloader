@@ -107,6 +107,9 @@ nav a {
   align-items: center;
   background: transparent;
 }
+#content{
+background: #000000a8;
+}
 .wave {
   width: 5px;
   height: 100px;
