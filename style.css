@@ -108,7 +108,9 @@ nav a {
   background: transparent;
 }
 #content{
-background: #000000a8;
+    background: #000000a8;
+    color: white;
+    font-weight:bold;
 }
 .wave {
   width: 5px;
