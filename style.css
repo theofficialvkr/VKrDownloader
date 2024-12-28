@@ -60,7 +60,13 @@ nav a {
 #downloadBtn:hover {
     background-color: #0056b3;
 }
-
+#download{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    flex-wrap:wrap;
+}
 #loading {
     text-align: center;
     display: none;
@@ -97,7 +103,7 @@ nav a {
     font-weight: bold;
     color: white;
     cursor: pointer;
-    width: 150px;  /* Fixed width */
+    min-width: 150px;  /* Fixed width */
     transition: background-color 0.3s;
 }
 .centerV {
