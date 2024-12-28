@@ -340,7 +340,7 @@ function generateDownloadButtons(videoData, inputUrl) {
             const qualities = ["mp3", "360", "720", "1080"];
             qualities.forEach(quality => {
                 downloadContainer.innerHTML += `
-      <iframe style="border: 0; outline: none; width: 100%; max-height: 45px; height: 45px !important; margin-top: 10px; overflow: hidden;"   sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-downloads-without-user-activation"  scrolling="no"
+      <iframe style="border: 0; outline: none; min-width: 150px; max-height: 45px; height: 45px !important; margin-top: 10px; overflow: hidden;"   sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-downloads-without-user-activation"  scrolling="no"
        src="https://vkrdownloader.xyz/server/dlbtn.php?q=${encodeURIComponent(quality)}&vkr=${encodeURIComponent(videoSource)}">
        </iframe>`;
             });
