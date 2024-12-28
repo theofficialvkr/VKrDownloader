@@ -22,7 +22,46 @@
     -->
     
 </head>
+<script>
+    function getBodyBG() {
+    const imageArray = [
+        "https://img3.wallspic.com/crops/6/3/5/8/7/178536/178536-sunset-nature-dusk-water-cloud-1080x2160.jpg",
+        "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-markarronsmith-2251798.jpg&fm=jpg",
+        "https://images.pexels.com/photos/937980/pexels-photo-937980.jpeg?cs=srgb&dl=pexels-kovyrina-937980.jpg&fm=jpg",
+        "https://wallpapercave.com/wp/wp6974666.jpg",
+        "https://www.pngmagic.com/product_images/sunset-hd-nature-background-for-photo-editing_l2f.jpeg",
+        "https://e1.pxfuel.com/desktop-wallpaper/363/258/desktop-wallpaper-a-touch-of-light-here-and-there-best-whatsapp-dp.jpg",
+        "https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://images.pexels.com/photos/1957693/pexels-photo-1957693.jpeg?cs=srgb&dl=pexels-markusspiske-1957693.jpg&fm=jpg",
+        "https://i.pinimg.com/736x/a6/a2/c4/a6a2c43dd162b80261ad87be1c875965.jpg",
+    ];
 
+    if (imageArray.length === 0) {
+        return null; // Return null if the array is empty
+    }
+
+    const randomKey = Math.floor(Math.random() * imageArray.length); // Get a random index
+    const bbgimg = imageArray[randomKey]; // Retrieve the corresponding URL
+
+    // Apply the selected background image to the body
+    const style = `
+        body {
+            background-image: url('${bbgimg}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    `;
+
+    // Append the style to the document head
+    const styleElement = document.createElement("style");
+    styleElement.innerHTML = style;
+    document.head.appendChild(styleElement);
+}
+
+// Call the function to set the background
+getBodyBG();
+</script>
 <body>
     <header class="bg-dark text-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
