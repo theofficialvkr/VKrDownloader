@@ -18,6 +18,9 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display:flex;
+    width:100%;
+    flex-direction: row-reverse !important;
 }
 
 nav li {
@@ -181,7 +184,9 @@ nav a {
         display: block;
         text-align: center;
     }
-
+   nav ul{
+       flex-direction: column !important;
+   }
     nav li {
         display: block;
         margin: 10px 0;
