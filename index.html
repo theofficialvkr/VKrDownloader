@@ -46,11 +46,13 @@
     // Apply the selected background image to the body
     const style = `
         body {
-            background-image: url('${bbgimg}');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height:100%;
+    background-image: url('${bbgimg}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0; 
         }
     `;
 
