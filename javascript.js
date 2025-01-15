@@ -333,10 +333,10 @@ function generateDownloadButtons(videoData, inputUrl) {
         // Add YouTube specific button if applicable
         const videoId = getYouTubeVideoIds(videoSource);
         if (videoId) {
-            downloadContainer.innerHTML += `
-                <a href='https://inv.nadeko.net/latest_version?id=${videoId}&itag=18&local=true' target='_blank' rel='noopener noreferrer'>
-                    <button class='dlbtns' style='background: green'>Download Video (YouTube)</button>
-                </a>`;
+          //  downloadContainer.innerHTML += `
+          //      <a href='https://inv.nadeko.net/latest_version?id=${videoId}&itag=18&local=true' target='_blank' rel='noopener noreferrer'>
+          //          <button class='dlbtns' style='background: green'>Download Video (YouTube)</button>
+          //      </a>`;
             const qualities = ["mp3", "360", "720", "1080"];
             qualities.forEach(quality => {
                 downloadContainer.innerHTML += `
