@@ -374,6 +374,6 @@ function generateDownloadButtons(videoData, inputUrl) {
         displayError("Server Down due to Too Many Requests. Please contact us on Social Media @TheOfficialVKr.");
         document.getElementById("container").style.display = "none";
         // Redirecting the user to an alternative download page
-        window.location.href = `https://vkrdownloader.xyz/download.php?vkr=${encodeURIComponent(inputUrl)}`;
+       // window.location.href = `https://vkrdownloader.xyz/download.php?vkr=${encodeURIComponent(inputUrl)}`;
     }
 }
