@@ -287,6 +287,7 @@ function handleSuccessResponse(data, inputUrl) {
             <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
                    poster='${thumbnailUrl}' controls playsinline>
                 ${downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('')}
+                <source src='https://vkrdownloader.xyz/server/dl.php?vkr=${inputUrl}' type='video/mp4'>
             </video>`;
         const YTvideoHtml = `
             <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
