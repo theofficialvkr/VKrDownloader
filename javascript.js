@@ -178,15 +178,29 @@ function makeRequest(inputUrl, retries = 4) {
 
 function getErrorMessage(xhr, status, error) {
     const statusCode = xhr.status;
+    let message = `Status: ${status}, Error: ${error}`;
+
+    if (xhr.responseText) {
+        try {
+            const response = JSON.parse(xhr.responseText);
+            if (response && response.error) {
+                message += `, Server Error: ${response.error}`;
+            }
+        } catch (e) {
+            message += `, Unable to parse server response.`;
+        }
+    }
+
     switch (statusCode) {
         case 0: return "Network Error: The server is unreachable.";
         case 400: return "Bad Request: The input URL might be incorrect.";
         case 401: return "Unauthorized: Please check the API key.";
         case 429: return "Too Many Requests: You are being rate-limited.";
         case 503: return "Service Unavailable: The server is temporarily overloaded.";
-        default: return `Error ${statusCode}: ${xhr.statusText || error}`;
+        default: return `${message}, HTTP ${statusCode}: ${xhr.statusText || error}`;
     }
 }
+
 
 function displayError(message) {
     // Assuming there's a placeholder element for error messages
@@ -204,22 +218,6 @@ function displayError(message) {
  * @param {string} error - The error message.
  * @returns {string} - The formatted error message.
  */
-function getErrorMessage(xhr, status, error) {
-    let message = `Status: ${status}, Error: ${error}`;
-    
-    if (xhr.status) {
-        message += `, XHR Status: ${xhr.status}`;
-    }
-    
-    if (xhr.responseText) {
-        const response = JSON.parse(xhr.responseText);
-        if (response && response.error) {
-            message += `, Server Error: ${response.error}`;
-        }
-    }
-    
-    return message;
-}
 
 /*******************************
  * Event Handlers
