@@ -282,12 +282,12 @@ function handleSuccessResponse(data, inputUrl) {
     : videoData.thumbnail;
         // Construct video HTML
         const videoHtml = `
-            <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
-                   poster='${thumbnailUrl}' controls playsinline>
-                <source src='${videoData.downloads[0].url}' type='video/mp4'>
-                ${downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('')}
-                <source src='https://vkrdownloader.xyz/server/dl.php?vkr=${inputUrl}' type='video/mp4'>
-            </video>`;
+    <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
+           poster='${thumbnailUrl}' controls playsinline>
+        <source src='${videoData.downloads[0]?.url || ''}' type='video/mp4'>
+        ${Array.isArray(downloadUrls) ? downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('') : ''}
+        <source src='https://vkrdownloader.xyz/server/dl.php?vkr=${encodeURIComponent(inputUrl)}' type='video/mp4'>
+    </video>`;
         const YTvideoHtml = `
             <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
                    poster='${thumbnailUrl}' controls playsinline>
