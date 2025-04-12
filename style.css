@@ -106,6 +106,7 @@ nav a {
     font-weight: bold;
     color: white;
     cursor: pointer;
+    width:auto;
     min-width: 150px;  /* Fixed width */
     transition: background-color 0.3s;
 }
