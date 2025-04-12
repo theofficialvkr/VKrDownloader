@@ -39,7 +39,7 @@
       font-weight: bold;
       color: white;
       cursor: pointer;
-      width: 150px;
+      width: auto;
       /* Fixed width */
       transition: background-color 0.3s;
     }
