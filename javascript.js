@@ -345,7 +345,6 @@ function generateDownloadButtons(videoData, inputUrl) {
        </iframe>`;
             });
         }
-
         // Generate download buttons for available formats
         downloads.forEach(download => {
             if (download && download.url) {
