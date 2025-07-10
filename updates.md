@@ -57,4 +57,6 @@ Flexible Format & Quality Options: Get download links in various resolutions and
 <li>Speed it up</li>
 <li>Fix converting Button </li>
 <li>Fix Video Player</li>
+<hr>
 
+<li>Use both ytdlp & Youtube-dl</li>
