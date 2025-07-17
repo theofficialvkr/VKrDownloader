@@ -10,7 +10,6 @@ const formatColors = {
 /*******************************
  * Utility Functions
  *******************************/
-
 /**
  * Get the background color based on the format itag.
  * @param {string} downloadUrlItag - The itag parameter from the download URL.
