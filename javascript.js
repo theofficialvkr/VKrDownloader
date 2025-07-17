@@ -377,9 +377,11 @@ function generateDownloadButtons(videoData, inputUrl) {
                 const videoSize = download.size;
 
               downloadContainer.innerHTML += `
-    <button class='dlbtns' style='background:${bgColor}' onclick="forceDownload('${downloadUrl}', '${videoExt || 'video'}.mp4')">
+    <button class="dlbtns" style="background:${bgColor}" onclick='forceDownload("${downloadUrl}", "${videoExt || 'video'}.mp4")'>
         ${sanitizeContent(videoExt)} - ${sanitizeContent(videoSize)}
-    </button>`;
+    </button>
+`;
+
 
             }
         });
