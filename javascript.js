@@ -375,7 +375,7 @@ function generateDownloadButtons(videoData, inputUrl) {
                 const videoExt = download.format_id;
                 const videoSize = download.size;
 
-const redirectUrl = `https://vkrdownloader.xyz/forcedl?force=${encodeURIComponent(downloadUrl)}`;
+const redirectUrl = `https://vkrdownloader.xyz/forcedl?forceT=${videoData.title}&forceD=${encodeURIComponent(downloadUrl)}`;
 downloadContainer.innerHTML += `
   <button class="dlbtns" style="background:${bgColor}" onclick="window.location.href='${redirectUrl}'">
     ${sanitizeContent(videoExt)} - ${sanitizeContent(videoSize)}
