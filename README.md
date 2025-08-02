@@ -1,9 +1,18 @@
 <h1>VKrDownloader</h1>
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
+![API Stable](https://img.shields.io/badge/API-Stable-brightgreen)
+[![Demo Site](https://img.shields.io/badge/Demo-Live-brightgreen)](https://theofficialvkr.github.io/VKrDownloader/)
+
+> 🧰 A powerful, all-in-one video downloader by **Vijay Kumar** that supports 1000+ websites including YouTube, Facebook, Instagram, Twitter, TikTok, and more!
+
+
 <p>
-    Video Downloader by Vijay Kumar 
     <a href="https://instagram.com/theofficialvkr">@TheOfficialVKr</a> 
+    
+ <li><strong>Telegram</strong>: <a href="https://t.me/vkrdownloader">join telegram @vkrdownloader</a></li>
 </p>
-    <li><strong>Telegram</strong>: <a href="https://t.me/vkrdownloader">join telegram @vkrdownloader</a></li>
 
  <h2>Demo</h2>   
  Light theme https://theofficialvkr.github.io/VKrDownloader/
