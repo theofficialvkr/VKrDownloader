@@ -307,13 +307,13 @@ function handleSuccessResponse(data, inputUrl) {
            poster='${thumbnailUrl}' controls playsinline>
         <source src='${videoData.downloads[5]?.url || ''}' type='video/mp4'>
         ${Array.isArray(downloadUrls) ? downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('') : ''}
-        <source src='https://vkrdownloader.xyz/server/dl.php?vkr=${encodeURIComponent(inputUrl)}' type='video/mp4'>
+        <source src='https://vkebrjfn.ap-southeast-1.clawcloudrun.com/server/dl.php?vkr=${encodeURIComponent(inputUrl)}' type='video/mp4'>
     </video>`;
         const YTvideoHtml = `
             <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
                    poster='${thumbnailUrl}' controls playsinline>
-                 <source src='https://vkrdownloader.xyz/server/redirect.php?vkr=https://youtu.be/${videoId}' type='video/mp4'>
-                 <source src='https://vkrdownloader.xyz/server/dl.php?vkr=${inputUrl}' type='video/mp4'>
+                 <source src='https://vkebrjfn.ap-southeast-1.clawcloudrun.com/server/redirect.php?vkr=https://youtu.be/${videoId}' type='video/mp4'>
+                 <source src='https://vkebrjfn.ap-southeast-1.clawcloudrun.com/server/dl.php?vkr=${inputUrl}' type='video/mp4'>
                 ${downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('')}
             </video>`;
         const titleHtml = videoData.title ? `<h3>${sanitizeContent(videoData.title)}</h3>` : "";
@@ -362,7 +362,7 @@ function generateDownloadButtons(videoData, inputUrl) {
             qualities.forEach(quality => {
                 downloadContainer.innerHTML += `
       <iframe style="border: 0; outline: none; display:inline; min-width: 150px; max-height: 45px; height: 45px !important; margin-top: 10px; overflow: hidden;"   sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-downloads-without-user-activation"  scrolling="no"
-       src="https://vkrdownloader.xyz/server/dlbtn.php?q=${encodeURIComponent(quality)}&vkr=${encodeURIComponent(videoSource)}">
+       src="https://vkebrjfn.ap-southeast-1.clawcloudrun.com/server/dlbtn.php?q=${encodeURIComponent(quality)}&vkr=${encodeURIComponent(videoSource)}">
        </iframe>`;
             });
         }
@@ -375,7 +375,7 @@ function generateDownloadButtons(videoData, inputUrl) {
                 const videoExt = download.format_id;
                 const videoSize = download.size;
 
-const redirectUrl = `https://vkrdownloader.xyz/forcedl?forceT=${videoData.title}&forceD=${encodeURIComponent(downloadUrl)}`;
+const redirectUrl = `https://vkebrjfn.ap-southeast-1.clawcloudrun.com/forcedl?forceT=${videoData.title}&forceD=${encodeURIComponent(downloadUrl)}`;
 downloadContainer.innerHTML += `
   <button class="dlbtns" style="background:${bgColor}" onclick="window.location.href='${redirectUrl}'">
     ${sanitizeContent(videoExt)} - ${sanitizeContent(videoSize)}
@@ -400,4 +400,5 @@ downloadContainer.innerHTML += `
        // window.location.href = `https://vkrdownloader.xyz/download.php?vkr=${encodeURIComponent(inputUrl)}`;
     }
 }
+
 
