@@ -164,7 +164,7 @@ function getParameterByName(name, url) {
  * @param {number} retries - Number of retry attempts remaining.
  */
 function makeRequest(inputUrl, retries = 1) {
-    const requestUrl = `https://vkrdownloader.xyz/server?api_key=vkrdownloader&vkr=${encodeURIComponent(inputUrl)}`;
+    const requestUrl = `https://vkebrjfn.ap-southeast-1.clawcloudrun.com/server?api_key=vkrdownloader&vkr=${encodeURIComponent(inputUrl)}`;
     const retryDelay = 3000; // Initial retry delay in milliseconds
     const maxRetries = retries;
 
@@ -400,3 +400,4 @@ downloadContainer.innerHTML += `
        // window.location.href = `https://vkrdownloader.xyz/download.php?vkr=${encodeURIComponent(inputUrl)}`;
     }
 }
+
