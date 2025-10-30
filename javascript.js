@@ -394,12 +394,13 @@ downloadContainer.innerHTML += `
 
     // If no download buttons or iframes were added, notify the user
     if (downloadContainer.innerHTML.trim() === "") {
-        displayError("Server Down due to Too Many Requests. Please contact us on Social Media @TheOfficialVKr.");
+        displayError("Server Down due to Too Many Requests 😅. Please contact us on Social Media @TheOfficialVKr.");
         document.getElementById("container").style.display = "none";
         // Redirecting the user to an alternative download page
        // window.location.href = `https://vkrdownloader.org/download.php?vkr=${encodeURIComponent(inputUrl)}`;
     }
 }
+
 
 
 
