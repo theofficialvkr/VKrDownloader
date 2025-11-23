@@ -313,7 +313,7 @@ function handleSuccessResponse(data, inputUrl) {
             <video style='background: black url(${thumbnailUrl}) center center/cover no-repeat; width:100%; height:500px; border-radius:20px;' 
                    poster='${thumbnailUrl}' controls playsinline>
                  <source src='https://vkrdownloader.org/server/redirect.php?vkr=https://youtu.be/${videoId}' type='video/mp4'>
-                 <source src='https://vkrdownloader.org/server/dl.php?vkr=${inputUrl}' type='video/mp4'>
+                 <source src='https://vkrdownloader.org/server/apibtn/dl.php?vkr=${inputUrl}' type='video/mp4'>
                 ${downloadUrls.map(url => `<source src='${url}' type='video/mp4'>`).join('')}
             </video>`;
         const titleHtml = videoData.title ? `<h3>${sanitizeContent(videoData.title)}</h3>` : "";
@@ -362,7 +362,7 @@ function generateDownloadButtons(videoData, inputUrl) {
             qualities.forEach(quality => {
                 downloadContainer.innerHTML += `
       <iframe style="border: 0; outline: none; display:inline; min-width: 150px; max-height: 45px; height: 45px !important; margin-top: 10px; overflow: hidden;"   sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads allow-downloads-without-user-activation"  scrolling="no"
-       src="https://vkrdownloader.org/server/dlbtn.php?q=${encodeURIComponent(quality)}&vkr=${encodeURIComponent(videoSource)}">
+       src="https://vkrdownloader.org/server/apibtn?q=${encodeURIComponent(quality)}&vkr=${encodeURIComponent(videoSource)}">
        </iframe>`;
             });
         }
@@ -400,6 +400,7 @@ downloadContainer.innerHTML += `
        // window.location.href = `https://vkrdownloader.org/download.php?vkr=${encodeURIComponent(inputUrl)}`;
     }
 }
+
 
 
 
