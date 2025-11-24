@@ -55,7 +55,7 @@
 <p>With the VKrDownloader API, you can programmatically download videos from supported sites.</p>
 
 <h3>API Endpoint</h3>
-<pre><code>GET https://vkrdownloader.xyz/server/?api_key=API-KEY&vkr=VIDEO_URL</code></pre>
+<pre><code>GET https://vkrdownloader.org/server/?api_key=API-KEY&vkr=VIDEO_URL</code></pre>
 
 <h3>Request Parameters</h3>
 <ul>
@@ -72,11 +72,11 @@
 </ul>
 
 <h3>Example Request (Query String)</h3>
-<pre><code>curl "https://vkrdownloader.xyz/server/?api_key=vkrdownloader&vkr=https://youtu.be/3VxnPQWvg5w"
+<pre><code>curl "https://vkrdownloader.org/server/?api_key=vkrdownloader&vkr=https://youtu.be/3VxnPQWvg5w"
 </code></pre>
 
 <h3>Example Request (Header)</h3>
-<pre><code>curl -X POST https://vkrdownloader.xyz/server/ \
+<pre><code>curl -X POST https://vkrdownloader.org/server/ \
 -H "x-api-key: YOUR_API_KEY" \
 -d "vkr=https://youtu.be/3VxnPQWvg5w"
 </code></pre>
@@ -114,10 +114,10 @@
 <p>To access the VKrDownloader API, you need an API key. You can pass it in the query string or the request header as <code>x-api-key</code>.</p>
 
 <h4>Example (Query String)</h4>
-<pre><code>https://vkrdownloader.xyz/server/?api_key=vkrdownloader&vkr=https://youtu.be/3VxnPQWvg5w</code></pre>
+<pre><code>https://vkrdownloader.orh/server/?api_key=vkrdownloader&vkr=https://youtu.be/3VxnPQWvg5w</code></pre>
 
 <h4>Example (Header)</h4>
-<pre><code>curl -X POST https://vkrdownloader.xyx/server/ \
+<pre><code>curl -X POST https://vkrdownloader.org/server/ \
 -H "x-api-key: YOUR_API_KEY" \
 -d "vkr=https://youtu.be/3VxnPQWvg5w"
 </code></pre>
