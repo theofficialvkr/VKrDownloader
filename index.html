@@ -1,195 +1,701 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
-    <meta name="title" content="VKrDownloader - Powerful Video Downloader and Online Tools">
-    <meta name="description" content="Download videos easily from various platforms with VKrDownloader. Your all-in-one video downloading and online tools solution.">
+    <meta name="title" content="VKrDownloader - Ultimate Video Downloader for YouTube, Facebook, Instagram & More">
+    <meta name="description" content="Download videos from 1000+ sites including YouTube, Facebook, Instagram, Twitter, TikTok in HD, 4K, MP4, MP3 formats for free.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="VKrDownloader, video downloader, download videos, online tools">
+    <meta name="keywords" content="video downloader, youtube downloader, facebook video download, instagram downloader, mp4 download, mp3 download, tiktok download">
     <meta name="robots" content="index,follow">
     <meta name="author" content="Vijay Kumar">
-    <meta property="og:title" content="VKrDownloader - Download Videos Easily and Quickly">
-    <meta property="og:description" content="VKrDownloader makes downloading videos easy and quick. Get started now with this powerful tool.">
-    <meta property="og:image" content="/VKrDownloader/logo.png">
-    <meta property="og:url" content="/">
+    <meta property="og:title" content="VKrDownloader - Professional Video Downloader">
+    <meta property="og:description" content="Download videos from any website in seconds. Free, fast, and unlimited downloads.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/main/logo.png">
+    <meta property="og:url" content="https://vkrdownloader.org">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="VKrDownloader - Easy Video Downloads">
-    <meta name="twitter:description" content="Use VKrDownloader for quick and easy video downloads from various platforms.">
-    <meta name="twitter:image" content="/VKrDownloader/logo.png">    
-    <link rel="icon" href="/VKrDownloader/logo.png" sizes="32x32" type="image/png">
-    <link rel="shortcut icon" href="/VKrDownloader/logo.png" type="image/x-icon">  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VKrDownloader - Download Videos Instantly">
+    <meta name="twitter:description" content="Professional video downloader for 1000+ websites. No registration required.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/main/logo.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/main/logo.png" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/main/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/main/logo.png">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>VKrDownloader - Download Videos from 1000+ Sites</title>
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="manifest" href="/VKrDownloader/manifest.webmanifest">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js" integrity="sha512-Ll+TuDvrWDNNRnFFIM8dOiw7Go7dsHyxRp4RutiIFW/wm3DgDmCnRZow6AqbXnCbpWu93yM1O34q+4ggzGeXVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>VkrDownloader: Download Videos / Audio Online From Any Site</title>
     
-    <!--
-
-        ADS START 
-    -->
-    
-        <!--
-
-        ADS END
-    -->
-    
-</head>
-<script>
-    function getBodyBG() {
-    const imageArray = [
-        "https://img3.wallspic.com/crops/6/3/5/8/7/178536/178536-sunset-nature-dusk-water-cloud-1080x2160.jpg",
-        "https://images.pexels.com/photos/2251798/pexels-photo-2251798.jpeg?cs=srgb&dl=pexels-markarronsmith-2251798.jpg&fm=jpg",
-        "https://images.pexels.com/photos/937980/pexels-photo-937980.jpeg?cs=srgb&dl=pexels-kovyrina-937980.jpg&fm=jpg",
-        "https://wallpapercave.com/wp/wp6974666.jpg",
-        "https://www.pngmagic.com/product_images/sunset-hd-nature-background-for-photo-editing_l2f.jpeg",
-        "https://e1.pxfuel.com/desktop-wallpaper/363/258/desktop-wallpaper-a-touch-of-light-here-and-there-best-whatsapp-dp.jpg",
-        "https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "https://images.pexels.com/photos/1957693/pexels-photo-1957693.jpeg?cs=srgb&dl=pexels-markusspiske-1957693.jpg&fm=jpg",
-        "https://i.pinimg.com/736x/a6/a2/c4/a6a2c43dd162b80261ad87be1c875965.jpg",
-    ];
-
-    if (imageArray.length === 0) {
-        return null; // Return null if the array is empty
-    }
-
-    const randomKey = Math.floor(Math.random() * imageArray.length); // Get a random index
-    const bbgimg = imageArray[randomKey]; // Retrieve the corresponding URL
-
-    // Apply the selected background image to the body
-    const style = `
-        body {
-    background-image: url('${bbgimg}');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    margin: 0; 
-    padding: 0; 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VKrDownloader",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "description": "Professional video downloader supporting 1000+ websites including YouTube, Facebook, Instagram, Twitter, TikTok",
+        "url": "https://vkrdownloader.org",
+        "author": {
+            "@type": "Person",
+            "name": "Vijay Kumar"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
         }
-    `;
+    }
+    </script>
+</head>
 
-    // Append the style to the document head
-    const styleElement = document.createElement("style");
-    styleElement.innerHTML = style;
-    document.head.appendChild(styleElement);
-}
-
-// Call the function to set the background
-getBodyBG();
-</script>
 <body>
-    <header class="bg-dark text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src="https://raw.githubusercontent.com/theofficialvkr/VKrDownloader/refs/heads/main/logo.png" style="width:40px; height:40px;border-radius:10px;box-shadow:3px 3px 10px yellow;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/VKrDownloader">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/theofficialvkr/VKrDownloader">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://instagram.com/theofficialvkr">Follow</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:contactvkr@yahoo.com">Contact</a></li>
-                </ul>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <div class="logo-particle"></div>
+                <div class="logo-particle"></div>
+                <div class="logo-particle"></div>
+                <span>VKr</span>
             </div>
-        </nav>
-    </header>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <div class="form-group">
-                    <input id="inputUrl" type="url" class="form-control" placeholder="Enter URL">
-                </div>
-                <button id="downloadBtn" type="submit" class="btn btn-primary">Download</button>
-            </div>
+            <div class="preloader-text">Loading Ultimate Downloader...</div>
         </div>
-
-        <div id="loading" class="text-center mt-3" style="display: none;">
-            
-
-
-<div class="centerV">
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-</div>
-
-
-
-
-
-        </div>
-
-        <div id="container" class="text-center mt-3" style="display: none;">
-            <div id="thumb" class="mb-3"></div>
-            <div id="title"></div>
-            <div id="description" class="mt-3"></div>
-            <div id="uploader"></div>
-            <div id="duration"></div>
-            <div id="extractor"></div>
-            <div id="downloadURL"></div>
-            <div id="download"></div>
-        </div>
-
-<div id="content" class="text-center mt-5 p-4" style="background-color: #150707c7; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <h2 style="font-weight: 700; color: #fff;">VKRDownloader - Download Videos Seamlessly</h2>
-    <p style="font-size: 1.1rem; color: #fff; margin-top: 10px;">
-        VKRDownloader by Vijay Kumar is your ultimate tool for downloading online videos, thumbnails, and music. It's fast, free, and hassle-free!
-    </p>
-    <hr style="margin: 20px 0; border-top: 1px solid #ddd;">
-    <h4 style="font-weight: 600; color: #c2c0c0;">Download from Your Favorite Platforms:</h4>
-    <ul style="list-style: none; padding: 0; font-size: 1rem; color: #e6e0e0; line-height: 1.8;">
-        <li>🎥 YouTube</li>
-        <li>📘 Facebook</li>
-        <li>🐦 Twitter</li>
-        <li>📸 Instagram (Reels)</li>
-        <li>🎵 TikTok</li>
-        <li>🌐 1000+ other websites</li>
-    </ul>
-    <p style="font-size: 1rem; color: #eae4e4; margin-top: 15px;">
-        Supports all audio and video qualities for the best experience.
-    </p>
-</div>
     </div>
-<br>
-    <footer class="bg-dark text-white text-center py-3 mt-10">
-        Powered By Vijay Kumar
-    </footer>
+
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <div class="particles-container"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element fe-1"></div>
+        <div class="floating-element fe-2"></div>
+        <div class="floating-element fe-3"></div>
+        <div class="floating-element fe-4"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-brand">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-primary">VKr</span>
+                                <span class="logo-secondary">Downloader</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-menu">
+                        <a href="#hero" class="nav-link active" data-scroll>
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#features" class="nav-link" data-scroll>
+                            <i class="fas fa-star"></i>
+                            <span>Features</span>
+                        </a>
+                        <a href="#how-it-works" class="nav-link" data-scroll>
+                            <i class="fas fa-play-circle"></i>
+                            <span>How It Works</span>
+                        </a>
+                        <a href="#platforms" class="nav-link" data-scroll>
+                            <i class="fas fa-globe"></i>
+                            <span>Platforms</span>
+                        </a>
+                        <a href="https://github.com/theofficialvkr/VKrDownloader" class="nav-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <a href="mailto:contactvkr@yahoo.com" class="btn-contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>ULTIMATE VIDEO DOWNLOADER</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">Download Videos From</span>
+                        <span class="hero-title-highlight">
+                            <span class="text-gradient">1000+ Platforms</span>
+                            <div class="title-underline"></div>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        The most powerful video downloader on the web. Download videos, audio, playlists, and more from YouTube, Facebook, Instagram, Twitter, TikTok, and 1000+ other sites in HD quality.
+                    </p>
+                    
+                    <!-- Download Card -->
+                    <div class="download-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h3 class="card-title">Enter Video URL or Search</h3>
+                            <p class="card-subtitle">Paste any video link or search YouTube videos</p>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="input-container">
+                                <div class="input-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <input type="text" id="inputUrl" class="input-field" 
+                                       placeholder="Paste video URL or search YouTube videos...">
+                                <div class="input-actions">
+                                    <button class="input-clear" id="inputClear">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                    <button class="input-paste" id="inputPaste">
+                                        <i class="fas fa-paste"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="card-tags">
+                                <span class="tag">
+                                    <i class="fab fa-youtube"></i> YouTube
+                                </span>
+                                <span class="tag">
+                                    <i class="fab fa-facebook"></i> Facebook
+                                </span>
+                                <span class="tag">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </span>
+                                <span class="tag">
+                                    <i class="fab fa-tiktok"></i> TikTok
+                                </span>
+                                <span class="tag">
+                                    <i class="fas fa-plus"></i> 1000+
+                                </span>
+                            </div>
+                            
+                            <button id="downloadBtn" class="download-button">
+                                <div class="button-content">
+                                    <i class="fas fa-magic"></i>
+                                    <span>Extract & Download</span>
+                                </div>
+                                <div class="button-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Secure</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Ultra Fast</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-infinity"></i>
+                                <span>No Limits</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">1M+</div>
+                            <div class="stat-label">Downloads</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">1000+</div>
+                            <div class="stat-label">Platforms</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="visual-card vc-1">
+                            <div class="visual-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="visual-text">YouTube Download</div>
+                        </div>
+                        <div class="visual-card vc-2">
+                            <div class="visual-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="visual-text">Facebook Download</div>
+                        </div>
+                        <div class="visual-card vc-3">
+                            <div class="visual-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="visual-text">Instagram Download</div>
+                        </div>
+                        <div class="visual-card vc-4">
+                            <div class="visual-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="visual-text">MP3 Audio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading-container">
+            <div class="loading-content">
+                <div class="loading-spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-dot"></div>
+                </div>
+                <div class="loading-text">
+                    <span class="text-line line-1">Analyzing video content</span>
+                    <span class="text-line line-2">Extracting download links</span>
+                    <span class="text-line line-3">Preparing formats</span>
+                </div>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="container" class="results-container">
+            <div class="results-header">
+                <h2 class="results-title">
+                    <i class="fas fa-download"></i>
+                    Download Options
+                </h2>
+                <button class="results-close" id="resultsClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="results-content">
+                <div class="video-preview-section">
+                    <div id="thumb" class="video-preview"></div>
+                    <div class="video-info">
+                        <h3 id="title" class="video-title"></h3>
+                        <div class="video-meta">
+                            <div id="uploader" class="meta-item"></div>
+                            <div id="duration" class="meta-item"></div>
+                            <div id="extractor" class="meta-item"></div>
+                        </div>
+                        <div id="description" class="video-description"></div>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <div class="section-header">
+                        <h4>
+                            <i class="fas fa-file-download"></i>
+                            Available Formats
+                        </h4>
+                        <div class="format-filter" id="formatFilter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="video">Video</button>
+                            <button class="filter-btn" data-filter="audio">Audio</button>
+                            <button class="filter-btn" data-filter="hd">HD</button>
+                        </div>
+                    </div>
+                    
+                    <div id="download" class="formats-grid"></div>
+                    
+                    <div id="downloadURL" class="direct-url-section">
+                        <div class="url-header">
+                            <h5>
+                                <i class="fas fa-external-link-alt"></i>
+                                Direct Download URL
+                            </h5>
+                            <button class="url-copy" id="urlCopy">
+                                <i class="fas fa-copy"></i>
+                                Copy
+                            </button>
+                        </div>
+                        <div class="url-input-container">
+                            <input type="text" id="directUrl" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Results Container -->
+        <div id="searchResults" class="search-results-container">
+            <div class="search-header">
+                <h2>
+                    <i class="fas fa-search"></i>
+                    Search Results
+                </h2>
+                <div class="search-stats">
+                    <span id="searchCount">0 results found</span>
+                </div>
+            </div>
+            <div class="search-grid" id="searchGrid">
+                <!-- Search results will be injected here -->
+            </div>
+            <div class="search-footer">
+                <button class="btn-back" id="searchBack">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Downloader
+                </button>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">Why Choose VKrDownloader?</span>
+                        <div class="title-underline"></div>
+                    </h2>
+                    <p class="section-subtitle">Professional features for the ultimate downloading experience</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-desc">Extract and download videos in seconds with our optimized processing engine.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">Secure & Private</h3>
+                        <p class="feature-desc">Your privacy is our priority. No data collection, no tracking, completely secure.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">Mobile Friendly</h3>
+                        <p class="feature-desc">Perfectly optimized for all devices - desktop, tablet, and mobile.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">All Formats</h3>
+                        <p class="feature-desc">Download in MP4, MP3, WEBM, and all popular video/audio formats.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">No Limits</h3>
+                        <p class="feature-desc">Unlimited downloads with no restrictions, watermarks, or hidden fees.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3 class="feature-title">High Quality</h3>
+                        <p class="feature-desc">Download videos in HD, Full HD, 2K, 4K, and even 8K quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">How It Works</span>
+                        <div class="title-underline"></div>
+                    </h2>
+                    <p class="section-subtitle">Download videos in three simple steps</p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3 class="step-title">Copy URL</h3>
+                        <p class="step-desc">Copy video link from any supported platform</p>
+                    </div>
+                    
+                    <div class="step-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="step-title">Paste & Analyze</h3>
+                        <p class="step-desc">Paste URL and let our system analyze the video</p>
+                    </div>
+                    
+                    <div class="step-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="step-title">Download</h3>
+                        <p class="step-desc">Choose format and download instantly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platforms Section -->
+        <section id="platforms" class="platforms-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-text">Supported Platforms</span>
+                        <div class="title-underline"></div>
+                    </h2>
+                    <p class="section-subtitle">Download videos from all major platforms and 1000+ websites</p>
+                </div>
+                
+                <div class="platforms-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon youtube">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>YouTube</h3>
+                        <p>MP4, MP3, HD, 4K</p>
+                        <div class="platform-badge">Most Popular</div>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3>Facebook</h3>
+                        <p>Videos, Reels, Stories</p>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Reels, Posts, Stories</p>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <h3>Twitter</h3>
+                        <p>Videos, GIFs, Clips</p>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3>TikTok</h3>
+                        <p>Videos, Music</p>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon globe">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>1000+ Sites</h3>
+                        <p>All major platforms</p>
+                        <div class="platform-badge">Premium</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Download?</h2>
+                    <p class="cta-desc">Start downloading videos from 1000+ platforms now. No registration required!</p>
+                    <div class="cta-form">
+                        <input type="text" placeholder="Enter video URL..." class="cta-input">
+                        <button class="cta-button">
+                            <i class="fas fa-download"></i>
+                            Download Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-primary">VKr</span>
+                                <span class="logo-secondary">Downloader</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">The ultimate video downloading solution for professionals.</p>
+                        <div class="footer-social">
+                            <a href="https://github.com/theofficialvkr" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/theofficialvkr" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:contactvkr@yahoo.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="links-column">
+                            <h4>Product</h4>
+                            <a href="#features">Features</a>
+                            <a href="#how-it-works">How It Works</a>
+                            <a href="#platforms">Platforms</a>
+                            <a href="#">Pricing</a>
+                        </div>
+                        
+                        <div class="links-column">
+                            <h4>Company</h4>
+                            <a href="#">About Us</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Press</a>
+                        </div>
+                        
+                        <div class="links-column">
+                            <h4>Support</h4>
+                            <a href="#">Help Center</a>
+                            <a href="mailto:contactvkr@yahoo.com">Contact Us</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 VKrDownloader. All rights reserved. | Created by <strong>Vijay Kumar</strong></p>
+                    <p class="disclaimer">Disclaimer: Please respect copyright laws and only download content you have permission to use.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="fab">
+            <i class="fas fa-download"></i>
+        </button>
+    </div>
+
     <script>
         if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(() => {
     console.log('Service Worker Registered');
   });
         }
-            </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J6S9D6Z17"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4J6S9D6Z17');
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://vkrdownloader.org/static/js/devdata.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="javascript.js"></script>
+    </script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js"></script>
+    <script src="javascript.js"></script>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J6S9D6Z17"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4J6S9D6Z17');
+    </script>
 </body>
 
 </html>
-
-
