@@ -17,7 +17,7 @@
  <h2>Demo</h2>   
  Light theme https://theofficialvkr.github.io/VKrDownloader/
  <br>
- Dark Theme https://theofficialvkr.github.io/VKrDownloader/dark.html
+ 
  <hr>
 
  
